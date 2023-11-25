@@ -15,12 +15,26 @@
 
 """
 
-def main():
+def main(stroka1, stroka2):
     """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
+    Анализ строки
     """
-    pass
-    
-if __name__ == "__main__":
-    main()
+    out = None
+    if type(stroka1)== str and type(stroka2) == str:           
+        if stroka1 == stroka2:
+            out = 1
+        elif stroka1 > stroka2:
+            out = 2
+        elif stroka2 == 'learn':
+            out = 3
+        elif stroka1 < stroka2:
+            out = 4   
+    else:
+        out = 0
+
+    print(f'Резульатат: {out}')
+if __name__ == "__main__":  
+  main( 3,'data' )
+
+
+
